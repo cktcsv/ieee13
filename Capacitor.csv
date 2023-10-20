@@ -1,0 +1,3 @@
+name,enabled,n_phases,n_conds,base_freq,terminal1,terminal2,connection,num_steps,spec_type,kvar,kv,c,r,xl
+cap1,true,3,3,60,675,,wye,1,kvar,[ 600 ],4.16,[ 0.00009196730716755551 ],[ 0 ],[ 0 ]
+cap2,true,1,1,60,611.3,,wye,1,kvar,[ 100 ],2.4,[ 0.00004605177751501299 ],[ 0 ],[ 0 ]
