@@ -37,7 +37,7 @@ jobs:
     steps:
       - uses: actions/download-artifact@v2
         with:
-          name: archive
+          name: ckv
 
       - name: Release
         uses: actions/create-release@v1
