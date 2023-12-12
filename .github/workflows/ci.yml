@@ -18,7 +18,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          ref: yd_bal
+          ref: master
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: Archive
         run: zip -Z deflate ieee13.ckv *.csv *.json README LICENSE
