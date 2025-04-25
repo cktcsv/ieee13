@@ -21,12 +21,12 @@ jobs:
           ref: master
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: Archive
-        run: zip -Z deflate ieee13.ckv *.csv *.json README LICENSE
+        run: tar -cvf ieee13.ckt *.csv *.json README LICENSE
       - name: Upload archive
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
-          name: ckv
-          path: ieee13.ckv
+          name: ckt
+          path: ieee13.ckt
 
   release:
     name: Release
@@ -35,9 +35,9 @@ jobs:
     permissions: write-all
     needs: [ archive ]
     steps:
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4
         with:
-          name: ckv
+          name: ckt
 
       - name: Release
         uses: actions/create-release@v1
@@ -54,6 +54,6 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./ieee13.ckv
-          asset_name: ieee13-${{ github.ref_name }}.ckv
-          asset_content_type: application/zip
+          asset_path: ./ieee13.ckt
+          asset_name: ieee13-${{ github.ref_name }}.ckt
+          asset_content_type: application/x-tar
