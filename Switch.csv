@@ -1,0 +1,2 @@
+name,enabled,n_phases,n_conds,base_freq,terminal1,terminal2,length,units,line_code,geometry
+671692,true,3,3,60,671,692,0.001,none,,

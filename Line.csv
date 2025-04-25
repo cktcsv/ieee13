@@ -10,4 +10,3 @@ name,enabled,n_phases,n_conds,base_freq,terminal1,terminal2,length,units,line_co
 671684,true,2,2,60,671.1.3,684.1.3,300,ft,mtx604,
 684611,true,1,1,60,684.3,611.3,300,ft,mtx605,
 684652,true,1,1,60,684.1,652.1,800,ft,mtx607,
-671692,true,3,3,60,671,692,0.001,none,,
